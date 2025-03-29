@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANNER DESPLEGABLE</title>
+    <style>
+       body{
+        font-family: arial,sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+
+       }
+       /*CONTENEDOR PINCIPAL*/
+       .banner-container{
+         width: 100%;
+         overflow: hidden;
+         position: relative;
+         background-color: #333;
+       }
+       /*CONTENEDOR DE IMAGENES QUE SE MOVERAN*/
+       .banner-images{
+           display: flex;
+           animation: scrollBanner 15s linear infinite;
+
+       }
+       /*ANIMACION DE DESPLAZAMIENTO EN HORIZONTAL*/
+       @keyframes scrollBanner {
+          0%{
+            transform: translateX(0);
+          }
+          100%{
+            transform: translateX(-100%);
+          }
+
+        }
+        /*ESTILOS PARA TEXTO DE BIENVENIDA*/
+        .welcome-text{
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+            color: #333;
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: none;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a{
+            color: red;
+        }
+        .video{
+            text-align: center;
+            margin: 40px;
+        }
+        .video iframe{
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="welcome-text">Bienvenidos a la pizzeria nuevo amanecer</h1>
+    <header>
+        <!--banner de imagenes en movimento-->
+        <div class="banner-container">
+        <div class="banner-images">
+            <img src="../CLASE3/pizza/pizza1.jpg" alt="pizza 1">
+            <img src="../CLASE3/pizza/pizza2.jpg" alt="pizza 2">
+            <img src="../CLASE3/pizza/pizza3.jpg" alt="pizza 3">
+
+        </div>
+     </div>
+     <br><br>
+     <section class="video">
+        <h2>DESCUBRE COMO PREPARAR NUESTRAS DEILCIOSAS PIZZAS</h2>
+        <iframe src="https://www.youtube.com/embed/ywrLSeDVH5U?si=bTqRZT22L7SZwDEa"> 
+            <title> PREPARACION | PIZZAS</title>
+        
+
+        </iframe>
+     </section>
+          
+
+     <footer>
+        <!--COLOCAMOS EL COPYRIGTH-->
+        <p>&copy; 2025 - Pizzeria NuevoAmanecer | Todos los Derechos reservados</p>
+        <!--AÑADIMOS NUMERO DE CONTACTO-->
+        <!--EL CAMPO TARGET, ME PERMITE CREAR  NUEVA PESTAÑA-->
+        <p><strong> Contacto:944204852 </strong> <a href="https://wa.link/5pwqsl" target="_blank"944204852></a></p>
+     </footer>
+    
+</body>
+</html>
