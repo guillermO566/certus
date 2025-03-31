@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aliceblue;
+            padding: 20px;
+        }
+        .fore-container{
+               background-color: white;
+               padding: 20px;
+               border-radius: 8px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0,0.5);
+               max-width: 500px;
+               margin: 0 auto; 
+        }
+        h2{
+            text-align: center;
+            color: brown;
+
+        }
+        .fore-group{
+            margin-bottom: 15px;
+
+        }
+        .fore-group label{
+            display: black;
+            margin-bottom: 5px;
+            color: crimson;
+        }
+        .fore-group input, .fore-group select, .fore-group template{
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+          
+        }
+        .fore-group button{
+            background-color: blanchedalmond;
+            color: blueviolet;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+
+        }
+        .fore-group button:hover{
+            background-color: chartreuse;
+            
+        }
+
+
+
+    
+    </style>
+    <title>Document</title>
+    <strong>
+
+    </strong>
+</head>
+<body>
+    
+</body>
+<div class="fore_container">
+    <h2>formulario de registro de producto</h2>
+</div>
+
+<form action="#" method="post">
+
+    <!--nombre del producto-->
+    <div class="fore_group">
+        <label for="producto">nombre del producto</label>
+        <input type="text" id="producto" name="producto" required>
+    </div>
+  
+    <!--categorita del producto-->
+    <div class="fore-group">
+        <label for="categoria">categoria del producto</label>
+        <select id="categoria" name="categoria" required>
+            <option value="selecciones">seleccion</option>
+            <option value="electronica">electronica</option>
+            <option value="ropa">ropa</option>
+            <option value="alimento">alimento</option>
+            <option value="hogar">hogar</option>
+        </select>
+
+     <!--descripsion del producto-->
+
+    <div class="fore-group">
+        <label for="descriptor">descripsion del preoducto</label>
+        <textarea id="description" name="description" rows="4" required=""></textarea>
+    </div>
+    <!--precio-->
+    <div class="fore-group">
+        <label for="precio">precio del producto</label>
+        <input type="number" id="precio" name="precio" min="#" required>
+    </div>
+    <!--DISPONIBILIDAD-->
+    <div class="fore-group">
+        <label for="disponibilidad">esta disponible?</label>
+        <input type="radio" id="no disponible" name="disponibilidad" valor="no" required>si
+        <input type="radio" id="no disponible" name="disponibilidad" valor="no" required>no
+    </div>
+    
+    <!--produtos destaados-->
+    <div class="fore-group">
+        <label for="disponible">es un producto destacado ?</label>
+        <input type="checkbox" id="desstacado" name="destacado">
+        </div>
+
+    <!--fecha de regstro-->
+    <div class="fore-group">
+        <label for="fecha de registro">fecha de registro</label>
+        <input type="date" id="fecha registro" name="fecha registro" required>
+    </div>
+    <!--imagen del producto-->
+    <div class="fore-group">
+        <label for="imagen">subir imagen del producto</label>
+        <input type="file" id="imagen" name="imagen" accept="iamgen/#">
+    </div>
+
+    <!--boton de envio-->
+    <div class="fore-group">
+        <button type="submit">registrar producto</button>
+
+</form>
+
+
+
+
+
+   
+</html>
