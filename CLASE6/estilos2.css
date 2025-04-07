@@ -1,0 +1,87 @@
+/*Estilos Generales*/
+body{
+    /*Definimos una fuente sensilla y legible*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*color de fondo suave*/
+    background-color: #f4f4f4;
+    /*eliminamos el margen predeterminado*/
+    margin: 0%;
+    /*eliminamos el padin predeterminado*/
+    padding: 0%;
+    display: flex;
+    /*centra el contenido de forma horizontal*/
+    justify-content: center;
+    /*centra el contenido de forma verticalmente*/
+    align-items: center;
+    /*hace que el body ocupe toda la altura de la pantalla*/
+    height: 100lvh;
+}
+/*contenedor del formulario*/
+.form-container{
+    background-color: white;
+    /*bordes redondeados*/
+    border-radius: 8px;
+    /*espaciado interno*/
+    padding: 20px;
+    /*sombra suave para la profundidad*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /*ancho fijo para el formulario*/
+    width: 300px;
+}
+
+/*estilos para los titulos*/
+h1{
+    /*centra el texto*/
+    text-align: center;
+    /*color oscuro para el texto*/
+    color: #333;
+}
+
+/*estilos para las etiquetas de los campos*/
+label{
+    /*hace que las etiquetas esten linea bloque*/
+    display: block;
+    /*aplicar un espacio debajo de cada etiqueta*/
+    margin-bottom: 5px;
+    /*aplicar un color de texto gris*/
+    color: #555;
+}
+/*estilos para los campos de entrada*/
+input[type="text"],
+input[type="email"],
+input[type="number"], select{
+    /*hace que los campos ocupen todo el ancho disponible*/
+    width: 100%;
+    /*relleno interno para los campos*/
+    padding: 10px;
+    /*espacio entre los campos*/
+    margin-bottom: 15px;
+    /*aplicar un borde gris para los campos*/
+    border: 1px solid #ccc;
+    /*aplicar bordes ligeramente redondeados*/
+    border-radius: 4px;
+}
+
+/*estilo para el boton de envio*/
+button{
+    /*color verde*/
+    background-color: #4caf50;
+    /*texto blanco*/
+    color: white;
+    /*espaciado interno*/
+    padding: 10px 20px;
+    /*sin borde*/
+    border: none;
+    /*bordes redondeados*/
+    border-radius: 4px;
+    /*luego cambia el cursor del mouse al pasar por el*/
+    cursor: pointer;
+    /*hace que el boton ocupe todo el espacio del ancho disponible*/
+    width: 100%;
+    /*aumentamos el tamaño de la fuente*/
+    font-size: 16px;
+}
+button:hover{
+    background-color: #25a041;
+
+}
