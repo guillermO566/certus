@@ -1,0 +1,146 @@
+:root{
+    --bg-color: #f0f3f5;
+    --card-radius: 12px;
+    --transition: 0.3s ease;
+    --modal-bg: rgba(255,255,255,0.15);
+    --blur: 15px;
+    --shadow: 0 8px 10px rgba(0,0,0,0.2);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI',sans-serif;
+    background: var(--bg-color);
+    color: #333;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 24px;
+    padding: 40px;
+}
+
+.imagen{
+    border-radius: var(--card-radius);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition),box shadow var(--transiton);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.imagen img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover img{
+    transform: scale(1.05);
+}
+
+.imagen::after{
+    content: "Ver más";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition);
+}
+
+.imagen:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*MODAL CSS USANDO CHECKBOX*/
+input[type="checkbox"]{
+        display: none;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(var(--blur));
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    z-index: 999;
+    padding: 20px;
+}
+.modal-content{
+    background: var(--modal-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--card --card-radius);
+    padding: 24px;
+    max-width: 600px;
+    box-shadow:  var(--shadow);
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    animation: fadeln 0.4s ease;
+}
+.modal-content img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.cerrar{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+@keyframes fadeln{
+    from{
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*Mostrar Modal cuando el checkbox, se encuentre activo*/
+#img1:checked ~ .modal#modal1,
+#img2:checked ~ .modal#modal2,
+#img3:checked ~ .modal#modal3{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media(max-width:600px){
+    .modal-content{
+        padding: 16px;
+
+    }
+    .modal-content h2{
+        font-size: 20px;
+    }
+    
+}

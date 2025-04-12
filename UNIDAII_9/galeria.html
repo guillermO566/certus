@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria CSS - AVANZADA</title>
+    <link rel="stylesheet" href="relieve.css">
+</head>
+<body>
+    <!--SE PROCEDE A CREAR CHECKBOX PARA CADA IMAGEN-->
+    <input type="checkbox" id="img1">
+    <input type="checkbox" id="img2">
+    <input type="checkbox" id="img3">
+
+    <section class="galeria">
+        <label class="imagen" for="img1">
+            <img src="../UNIDAII_9/imagenes/BullTerrier.jpg" alt="BullTerrier1">
+        </label>
+        <label class="imagen" for="img2">
+            <img src="../UNIDAII_9/imagenes/BullTerrier2.jpg" alt="BullTerrier2">
+        </label>
+        <label class="imagen" for="img3">
+            <img src="../UNIDAII_9/imagenes/BullTerrier3.jpg" alt="BullTerrier3">
+        </label>
+    </section>
+
+    <!--SE PROCEDE A CREAR LOS MODALES-->
+    <!--MODAL 1-->
+    <div class="modal 1" id="modal1">
+        <div class="modal1-content"></div>
+        <label class="cerrar" for="img1">&times;</label>
+        <img src="BullTerrier1.jpg" alt="BullTerrier1" >
+        <p>BullTerrier Blanco</p>
+    </div>
+
+    <!--MODAL 2-->
+    <div class="modal 2" id="modal2">
+        <div class="modal1-content"></div>
+        <label class="cerrar" for="img2">&times;</label>
+        <img src="BullTerrier2.jpg" alt="BullTerrier2" >
+        <p>BullTerrier Marron</p>
+    </div>
+
+    <!--MODAL 3-->
+    <div class="modal 3" id="modal3">
+        <div class="modal1-content"></div>
+        <label class="cerrar" for="img3">&times;</label>
+        <img src="BullTerrier3.jpg" alt="BullTerrier3" >
+        <p>BullTerrier Negro</p>
+    </div>
+</body>
+</html>
