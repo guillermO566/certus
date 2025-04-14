@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.galeria{
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.imagenes{
+    display: flex;
+    width: 400%; /*ESTO AJUSTA SEGUN CANTIDAD DE IMAGENES (4)*/
+    height: 100%;
+    animation: deslizar 6s infinite;
+}
+
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes deslizar{
+    0%{transform: translateX(0%);}
+    25%{transform: translateX(-100%);}
+    50%{transform: translateX(-200%);}
+    75%{transform: translateX(-300%);}
+    100%{transform: translateX(0%);}
+}
