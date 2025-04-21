@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+</head>
+<body>
+    <h3>Ingrese dos números</h3>
+
+    <input type="number" id="numero1" placeholder="Ingrese 1er #"><br>
+    <input type="number" id="numero2" placeholder="Ingrese 2do #"><br>
+    <button onclick="sumar()">Sumar</button><br> <!-- Aquí se llama a la función -->
+
+    <p id="resultado"></p>
+
+    <script>
+        // Esta función se llama al hacer clic en el botón "Sumar"
+        function sumar() {
+            // Obtener los valores ingresados
+            const num1 = document.getElementById("numero1").value;
+            const num2 = document.getElementById("numero2").value;
+
+            // Convertirlos a números y sumarlos
+            const suma = Number(num1) + Number(num2);
+
+            // Mostrar el resultado
+            document.getElementById("resultado").textContent = "La suma es: " + suma;
+        }
+    </script>
+</body>
+</html>

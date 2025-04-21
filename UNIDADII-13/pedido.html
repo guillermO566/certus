@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar número</title>
+</head>
+<body>
+    <h2>Verificar número</h2>
+    <p>Ingrese un número entre 0 y 20:</p>
+
+    <input type="number" id="numero" min="0" max="20" placeholder="0 a 20">
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function verificar() {
+            const num = Number(document.getElementById("numero").value);
+            let mensaje = "";
+
+            if (num >= 0 && num <= 10) {
+                mensaje = "RARO";
+            } else if (num >= 11 && num <= 14) {
+                mensaje = "POLLO";
+            } else if (num >= 15 && num <= 17) {
+                mensaje = "IGOR";
+            } else if (num >= 18 && num <= 20) {
+                mensaje = "VACA";
+            } else {
+                mensaje = "Número fuera de rango";
+            }
+
+            document.getElementById("mensaje").textContent = mensaje;
+        }
+    </script>
+</body>
+</html>
